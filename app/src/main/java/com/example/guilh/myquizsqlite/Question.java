@@ -1,0 +1,77 @@
+package com.example.guilh.myquizsqlite;
+
+/**
+ * Created by guilh on 12/11/2016.
+ */
+
+public class Question {
+    private String question;
+    private String answer;
+    private String optA;
+    private String optB;
+    private String optC;
+
+
+    //Constructors
+
+    public Question(){
+        question = "";
+        answer = "";
+        optA = "";
+        optB = "";
+        optC = "";
+    }
+
+    public Question(String qUESTION, String aNSWER, String oPTA, String oPTB,String oPTC){
+        question = qUESTION;
+        answer = aNSWER;
+        optA = oPTA;
+        optB = oPTB;
+        optC = oPTC;
+    }
+
+    //Getters
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public String getOptA() {
+        return optA;
+    }
+
+    public String getOptB() {
+        return optB;
+    }
+
+    public String getOptC() {
+        return optC;
+    }
+
+    //Setters
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public void setOptA(String optA) {
+        this.optA = optA;
+    }
+
+    public void setOptB(String optB) {
+        this.optB = optB;
+    }
+
+    public void setOptC(String optC) {
+        this.optC = optC;
+    }
+
+}

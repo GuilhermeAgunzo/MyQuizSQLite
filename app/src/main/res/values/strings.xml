@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="txtUser">Enter your username:</string>
+    <string name="userHint">[Username]</string>
+    <string name="btnLogin">Login</string>
+    <string name="numTests">Tests:</string>
+    <string name="lastScore">Last score:</string>
+    <string name="avgScore">Average:</string>
+    <string name="btnStart">Start</string>
+    <string name="btnHistory">Test history</string>
+    <string name="btnAddQuestion">Add/List Questions</string>
+    <string name="options">Create/List/History</string>
+</resources>
