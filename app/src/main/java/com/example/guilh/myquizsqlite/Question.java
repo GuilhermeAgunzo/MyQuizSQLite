@@ -5,6 +5,7 @@ package com.example.guilh.myquizsqlite;
  */
 
 public class Question {
+    private int ID;
     private String question;
     private String answer;
     private String optA;
@@ -15,6 +16,7 @@ public class Question {
     //Constructors
 
     public Question(){
+        ID = 0;
         question = "";
         answer = "";
         optA = "";
@@ -31,6 +33,10 @@ public class Question {
     }
 
     //Getters
+
+    public int getID(){
+        return ID;
+    }
 
     public String getQuestion() {
         return question;
@@ -53,6 +59,10 @@ public class Question {
     }
 
     //Setters
+
+    public void setID(int id){
+        ID=id;
+    }
 
     public void setQuestion(String question) {
         this.question = question;

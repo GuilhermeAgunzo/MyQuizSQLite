@@ -103,6 +103,7 @@ public class DbHelper extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                 Question quest = new Question();
+                quest.setID(cursor.getInt(0));
                 quest.setQuestion(cursor.getString(1));
                 quest.setAnswer(cursor.getString(2));
                 quest.setOptA(cursor.getString(3));
