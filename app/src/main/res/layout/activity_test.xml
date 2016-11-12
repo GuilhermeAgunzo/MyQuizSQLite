@@ -10,4 +10,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.guilh.myquizsqlite.TestActivity">
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/questionTextView"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="@string/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnNext" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/questionTextView"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:id="@+id/optA"
+            android:layout_height="66dp"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:id="@+id/optB"
+            android:layout_height="66dp"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:id="@+id/optC"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:id="@+id/optD"
+            android:layout_height="66dp"
+            android:textSize="16sp" />
+
+    </RadioGroup>
 </RelativeLayout>

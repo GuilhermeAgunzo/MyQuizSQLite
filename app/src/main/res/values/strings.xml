@@ -7,7 +7,6 @@
     <string name="lastScore">Last score:</string>
     <string name="avgScore">Average:</string>
     <string name="btnStart">Start</string>
-    <string name="btnHistory">Test history</string>
-    <string name="btnAddQuestion">Add/List Questions</string>
+    <string name="btnNext">Next</string>
     <string name="options">Create/List/History</string>
 </resources>

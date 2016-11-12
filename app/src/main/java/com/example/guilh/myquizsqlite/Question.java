@@ -24,7 +24,7 @@ public class Question {
         optC = "";
     }
 
-    public Question(String qUESTION, String aNSWER, String oPTA, String oPTB,String oPTC){
+    public Question(String qUESTION, String oPTA, String oPTB, String oPTC,String aNSWER){
         question = qUESTION;
         answer = aNSWER;
         optA = oPTA;

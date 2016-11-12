@@ -63,19 +63,19 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private void addQuestions(){
         Question q1=new Question("Which company is the largest manufacturer" +
-                " of network equipment?","HP", "IBM", "CISCO", "C");
+                " of network equipment?","HP", "IBM", "CISCO", "CISCO");
         this.addQuestion(q1);
         Question q2=new Question("Which of the following is NOT " +
-                "an operating system?", "SuSe", "BIOS", "DOS", "B");
+                "an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
         this.addQuestion(q2);
         Question q3=new Question("Which of the following is the fastest" +
-                " writable memory?","RAM", "FLASH","Register","C");
+                " writable memory?","RAM", "FLASH","Register","Register");
         this.addQuestion(q3);
         Question q4=new Question("Which of the following device" +
-                " regulates internet traffic?",    "Router", "Bridge", "Hub","A");
+                " regulates internet traffic?",    "Router", "Bridge", "Hub","Router");
         this.addQuestion(q4);
         Question q5=new Question("Which of the following is NOT an" +
-                " interpreted language?","Ruby","Python","BASIC","C");
+                " interpreted language?","Ruby","Python","BASIC","BASIC");
         this.addQuestion(q5);
     }
 
