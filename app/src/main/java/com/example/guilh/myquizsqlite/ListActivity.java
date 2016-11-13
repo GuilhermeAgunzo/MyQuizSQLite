@@ -45,7 +45,7 @@ public class ListActivity extends AppCompatActivity {
     }
 
     private void optionsMenu(final String question){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ListActivity.this);
+        final AlertDialog alertDialogBuilder = new AlertDialog.Builder(ListActivity.this).create();
         ListView listOptions = new ListView(ListActivity.this);
 
         ArrayList<String> options = new ArrayList<>();
@@ -62,8 +62,8 @@ public class ListActivity extends AppCompatActivity {
                 if(i == 0){
 
                 }else if(i == 1){
-
                     deleteQuestion(question);
+                    alertDialogBuilder.dismiss();
                 }
             }
         });
@@ -76,5 +76,6 @@ public class ListActivity extends AppCompatActivity {
     private void deleteQuestion(String q){
         DbHelper db = new DbHelper(this);
         db.deleteQuest(q);
+        this.recreate();
     }
 }
