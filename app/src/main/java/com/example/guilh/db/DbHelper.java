@@ -138,4 +138,10 @@ public class DbHelper extends SQLiteOpenHelper {
         row=cursor.getCount();
         return row;
     }
+
+    public void deleteQuest(String question){
+        String deleteWhere = KEY_QUES + " = '" + question+ "'";
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_QUEST,deleteWhere,null);
+    }
 }

@@ -21,4 +21,6 @@
     <string name="optC">Option C</string>
     <string name="addQuestion">Add Question</string>
     <string name="questions">Questions:</string>
+    <string name="updateQuestion">Modify</string>
+    <string name="deleteQuestion">Delete</string>
 </resources>
