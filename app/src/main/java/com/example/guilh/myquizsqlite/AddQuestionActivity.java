@@ -45,7 +45,7 @@ public class AddQuestionActivity extends AppCompatActivity {
 
         Question quest = new Question(question,opta,optb,optc,answer);
 
-        db.addQuestion(quest);
+        db.addQuest(quest);
 
     }
 }

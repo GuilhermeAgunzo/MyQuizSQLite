@@ -81,9 +81,9 @@ public class DbHelper extends SQLiteOpenHelper {
         //Create tables again
         onCreate(db);
     }
-    // Adding new question
+    // Adding new question when creating the database
     public void addQuestion(Question quest) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        //SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_QUES, quest.getQuestion());
         values.put(KEY_ANSWER, quest.getAnswer());
@@ -91,8 +91,23 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(KEY_OPTB, quest.getOptB());
         values.put(KEY_OPTC, quest.getOptC());
         // Inserting Row
-        db.insert(TABLE_QUEST, null, values);
+        dbase.insert(TABLE_QUEST,null,values);
+
     }
+
+    //Adding new question the user entered
+    public void addQuest(Question question){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_QUES, question.getQuestion());
+        values.put(KEY_ANSWER, question.getAnswer());
+        values.put(KEY_OPTA, question.getOptA());
+        values.put(KEY_OPTB, question.getOptB());
+        values.put(KEY_OPTC, question.getOptC());
+        // Inserting Row
+        db.insert(TABLE_QUEST,null,values);
+    }
+
     public List<Question> getAllQuestions() {
         List<Question> quesList = new ArrayList<Question>();
         //Select All Query
