@@ -83,7 +83,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
     // Adding new question
     public void addQuestion(Question quest) {
-        //SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_QUES, quest.getQuestion());
         values.put(KEY_ANSWER, quest.getAnswer());
@@ -91,7 +91,7 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(KEY_OPTB, quest.getOptB());
         values.put(KEY_OPTC, quest.getOptC());
         // Inserting Row
-        dbase.insert(TABLE_QUEST, null, values);
+        db.insert(TABLE_QUEST, null, values);
     }
     public List<Question> getAllQuestions() {
         List<Question> quesList = new ArrayList<Question>();

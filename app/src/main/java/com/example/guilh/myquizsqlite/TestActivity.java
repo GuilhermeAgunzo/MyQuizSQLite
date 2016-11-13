@@ -51,8 +51,10 @@ public class TestActivity extends AppCompatActivity {
                     grp.clearCheck();
                     setQuestionView();
                 }else{
+
                     Intent intent = new Intent(TestActivity.this,ResultActivity.class);
                     intent.putExtra("score", score);
+                    intent.putExtra("questSize",quesList.size());
                     startActivity(intent);
                     finish();
                 }
