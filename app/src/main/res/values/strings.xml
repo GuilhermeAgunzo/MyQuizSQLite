@@ -9,4 +9,6 @@
     <string name="btnStart">Start</string>
     <string name="btnNext">Next</string>
     <string name="options">Create/List/History</string>
+    <string name="score">Score:</string>
+    <string name="finish">Finish</string>
 </resources>

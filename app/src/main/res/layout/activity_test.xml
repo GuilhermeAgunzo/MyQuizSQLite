@@ -32,7 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
         android:layout_below="@+id/questionTextView"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/alternativesRadioGroup">
 
         <RadioButton
             android:text="RadioButton"
@@ -53,13 +54,6 @@
             android:layout_width="wrap_content"
             android:layout_height="66dp"
             android:id="@+id/optC"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:text="RadioButton"
-            android:layout_width="wrap_content"
-            android:id="@+id/optD"
-            android:layout_height="66dp"
             android:textSize="16sp" />
 
     </RadioGroup>
