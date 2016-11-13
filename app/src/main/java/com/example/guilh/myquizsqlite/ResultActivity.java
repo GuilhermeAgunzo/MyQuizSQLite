@@ -26,11 +26,14 @@ public class ResultActivity extends AppCompatActivity {
 
 
         TextView tScore = (TextView) findViewById(R.id.numScoreTextView);
+        TextView tResult = (TextView) findViewById(R.id.resultTextView);
 
         Bundle bundle = getIntent().getExtras();
         int score = bundle.getInt("score");
         int qtQuest = bundle.getInt("questSize");
+        double result = bundle.getDouble("result");
 
+        tResult.setText(Double.toString(result) + "%");
         tScore.setText(Integer.toString(score) +" / "+ Integer.toString(qtQuest));
     }
 

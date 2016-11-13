@@ -19,7 +19,8 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".AddQuestionActivity" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

@@ -36,4 +36,14 @@
         android:layout_marginBottom="16dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="[Result]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scoreTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:id="@+id/resultTextView"
+        android:textSize="25sp" />
 </RelativeLayout>
