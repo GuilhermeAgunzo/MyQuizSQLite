@@ -56,9 +56,9 @@ public class HistoryActivity extends AppCompatActivity {
                     in.close();
                     fileDialog.setMessage(text);
                 }catch(Exception ex){
-                    fileDialog.setMessage("Erro ao carregar arquivo: "+ex.getLocalizedMessage());
+                    fileDialog.setMessage(getResources().getText(R.string.error)+" "+ex.getLocalizedMessage());
                 }
-                fileDialog.setNeutralButton("Fechar", null);
+                fileDialog.setNeutralButton(getResources().getText(R.string.close), null);
                 fileDialog.show();
             }
         });

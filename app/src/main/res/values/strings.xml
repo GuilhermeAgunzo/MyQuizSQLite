@@ -23,4 +23,6 @@
     <string name="questions">Questions:</string>
     <string name="updateQuestion">Modify</string>
     <string name="deleteQuestion">Delete</string>
+    <string name="close">Close</string>
+    <string name="error">Error:</string>
 </resources>
