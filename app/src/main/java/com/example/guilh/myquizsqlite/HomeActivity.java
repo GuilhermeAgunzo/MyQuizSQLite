@@ -32,6 +32,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        floatingActionButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, ListActivity.class);
+                startActivity(i);
+            }
+        });
+
         Button btn = (Button) findViewById(R.id.btnStart);
 
         btn.setOnClickListener(new View.OnClickListener() {

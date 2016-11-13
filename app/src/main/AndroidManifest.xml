@@ -18,7 +18,8 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".AddQuestionActivity"></activity>
+        <activity android:name=".AddQuestionActivity" />
+        <activity android:name=".ListActivity"></activity>
     </application>
 
 </manifest>

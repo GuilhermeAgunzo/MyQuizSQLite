@@ -32,6 +32,11 @@ public class Question {
         optC = oPTC;
     }
 
+    @Override
+    public String toString(){
+        return question;
+    }
+
     //Getters
 
     public int getID(){

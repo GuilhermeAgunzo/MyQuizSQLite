@@ -20,4 +20,5 @@
     <string name="optB">Option B</string>
     <string name="optC">Option C</string>
     <string name="addQuestion">Add Question</string>
+    <string name="questions">Questions:</string>
 </resources>
