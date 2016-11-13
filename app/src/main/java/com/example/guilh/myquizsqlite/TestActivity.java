@@ -48,6 +48,7 @@ public class TestActivity extends AppCompatActivity {
                 }
                 if(qid < quesList.size()){
                     currentQ=quesList.get(qid);
+                    grp.clearCheck();
                     setQuestionView();
                 }else{
                     Intent intent = new Intent(TestActivity.this,ResultActivity.class);
@@ -66,6 +67,5 @@ public class TestActivity extends AppCompatActivity {
         rdb.setText(currentQ.getOptB());
         rdc.setText(currentQ.getOptC());
         qid++;
-        System.out.println(currentQ.getAnswer());
     }
 }

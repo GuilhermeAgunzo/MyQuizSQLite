@@ -23,6 +23,15 @@ public class HomeActivity extends AppCompatActivity {
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.floating_questionList);
         floatingActionButton3 = (FloatingActionButton) findViewById(R.id.floating_history);
 
+
+        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, AddQuestionActivity.class);
+                startActivity(i);
+            }
+        });
+
         Button btn = (Button) findViewById(R.id.btnStart);
 
         btn.setOnClickListener(new View.OnClickListener() {

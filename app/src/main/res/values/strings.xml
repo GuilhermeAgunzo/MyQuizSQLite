@@ -8,7 +8,16 @@
     <string name="avgScore">Average:</string>
     <string name="btnStart">Start</string>
     <string name="btnNext">Next</string>
-    <string name="options">Create/List/History</string>
+    <string name="options">Create/Questions/History</string>
     <string name="score">Score:</string>
     <string name="finish">Finish</string>
+    <string name="question">Question:</string>
+    <string name="answer">Answer:</string>
+    <string name="alternatives">Alternatives:</string>
+    <string name="quesHint">Enter your Question</string>
+    <string name="answerHint">Enter the answer for your question</string>
+    <string name="optA">Option A</string>
+    <string name="optB">Option B</string>
+    <string name="optC">Option C</string>
+    <string name="addQuestion">Add Question</string>
 </resources>
