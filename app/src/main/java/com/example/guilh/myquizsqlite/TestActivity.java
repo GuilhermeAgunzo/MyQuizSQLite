@@ -66,5 +66,6 @@ public class TestActivity extends AppCompatActivity {
         rdb.setText(currentQ.getOptB());
         rdc.setText(currentQ.getOptC());
         qid++;
+        System.out.println(currentQ.getAnswer());
     }
 }
