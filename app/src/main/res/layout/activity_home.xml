@@ -135,7 +135,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnStart"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="64dp"
+        android:layout_alignTop="@+id/social_floating_menu"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

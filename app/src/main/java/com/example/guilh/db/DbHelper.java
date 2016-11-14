@@ -118,7 +118,26 @@ public class DbHelper extends SQLiteOpenHelper {
         return quesList;
     }
 
-    //Delete method
+    // Update method
+    // oQuest = old Question, will be used in where statement
+    // nQuest = new Question, this will be the object carrying the new question information
+    public void updateQuest(String oQuest,Question nQuest){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String updateWhere = KEY_QUES + " = '" + oQuest + "'"; // Where statement
+
+        // New values
+        ContentValues values = new ContentValues();
+        values.put(KEY_QUES, nQuest.getQuestion());
+        values.put(KEY_ANSWER, nQuest.getAnswer());
+        values.put(KEY_OPTA, nQuest.getOptA());
+        values.put(KEY_OPTB, nQuest.getOptB());
+        values.put(KEY_OPTC, nQuest.getOptC());
+
+        db.update(TABLE_QUEST,values,updateWhere,null);
+    }
+
+    // Delete method
+    // Delete the row based on question
     public void deleteQuest(String question){
         String deleteWhere = KEY_QUES + " = '" + question+ "'";
         SQLiteDatabase db = this.getWritableDatabase();
