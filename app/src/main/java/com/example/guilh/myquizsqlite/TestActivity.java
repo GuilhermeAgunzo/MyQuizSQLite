@@ -43,24 +43,28 @@ public class TestActivity extends AppCompatActivity {
         butNext=(Button)findViewById(R.id.btnNext);
         setQuestionView();
 
+        //Listener: Next button
         butNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RadioGroup grp=(RadioGroup)findViewById(R.id.alternativesRadioGroup);
                 RadioButton answer=(RadioButton)findViewById(grp.getCheckedRadioButtonId());
                 if(currentQ.getAnswer().equals(answer.getText())){
-                    score++;
+                    score++; // if answer equals to the selected radio, then add 1 point
                 }
-                if(qid < quesList.size()){
+                if(qid < quesList.size()){      // if not reached max size then gets a new question
                     currentQ=quesList.get(qid);
-                    grp.clearCheck();
+                    grp.clearCheck();           // clear the radio group selection
                     setQuestionView();
                 }else{
+                    // Converting to percent
                     double result = 100.0 * (double)score / (double)quesList.size();
 
+                    // Getting actual date
                     String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-                    String filename = date + ": [" + result + "%]";
+                    String filename = date + ": [" + result + "%]"; // Defining file name
                     FileOutputStream output;
+                    // Writing results in the file
                     try {
                         output = openFileOutput(filename, Context.MODE_PRIVATE);
                         output.write(("Acertos: " + score + " / " + quesList.size()).getBytes());
@@ -72,6 +76,7 @@ public class TestActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG).show();
                     }
 
+                    //Calling saveInPreferences, it saves SharedPreferences
                     saveInPreferences(result);
 
                     Intent intent = new Intent(TestActivity.this,ResultActivity.class);
@@ -86,6 +91,7 @@ public class TestActivity extends AppCompatActivity {
         });
     }
 
+    //Method for getting a new Question
     private void setQuestionView(){
         txtQuestion.setText(currentQ.getQuestion());
         rda.setText(currentQ.getOptA());
@@ -94,6 +100,7 @@ public class TestActivity extends AppCompatActivity {
         qid++;
     }
 
+    //Method for saving in Shared Preferences
     private void saveInPreferences(double result){
         SharedPreferences pref = this.getSharedPreferences("com.example.guilh.quiz", Context.MODE_PRIVATE);
         int qtde = pref.getInt("qtde", 0)+1;

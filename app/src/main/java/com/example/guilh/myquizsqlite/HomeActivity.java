@@ -62,6 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+    //Get SharedPreferences and set its values to the Text Views
     @Override
     protected void onResume() {
         super.onResume();
@@ -78,6 +79,7 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    //Initiate the Quiz
     private void initTest(){
         Intent i = new Intent(this,TestActivity.class);
         startActivity(i);

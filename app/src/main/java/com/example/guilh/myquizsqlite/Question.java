@@ -5,6 +5,8 @@ package com.example.guilh.myquizsqlite;
  */
 
 public class Question {
+
+   //Attributes
     private int ID;
     private String question;
     private String answer;
@@ -32,6 +34,7 @@ public class Question {
         optC = oPTC;
     }
 
+    //Custom toString, use to populate an ArrayList<Question> with the question and not the hash
     @Override
     public String toString(){
         return question;

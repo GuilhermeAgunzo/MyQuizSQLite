@@ -57,23 +57,7 @@ public class DbHelper extends SQLiteOpenHelper {
         this.addQuestion(q5);
         //db.close();
     }
-    private void addQuestions(){
-        Question q1=new Question("Which company is the largest manufacturer" +
-                " of network equipment?","HP", "IBM", "CISCO", "CISCO");
-        this.addQuestion(q1);
-        Question q2=new Question("Which of the following is NOT " +
-                "an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
-        this.addQuestion(q2);
-        Question q3=new Question("Which of the following is the fastest" +
-                " writable memory?","RAM", "FLASH","Register","Register");
-        this.addQuestion(q3);
-        Question q4=new Question("Which of the following device" +
-                " regulates internet traffic?",    "Router", "Bridge", "Hub","Router");
-        this.addQuestion(q4);
-        Question q5=new Question("Which of the following is NOT an" +
-                " interpreted language?","Ruby","Python","BASIC","BASIC");
-        this.addQuestion(q5);
-    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
         //Drop older table if existed
@@ -81,8 +65,10 @@ public class DbHelper extends SQLiteOpenHelper {
         //Create tables again
         onCreate(db);
     }
+
     // Adding new question when creating the database
     public void addQuestion(Question quest) {
+
         //SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_QUES, quest.getQuestion());
@@ -90,6 +76,7 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(KEY_OPTA, quest.getOptA());
         values.put(KEY_OPTB, quest.getOptB());
         values.put(KEY_OPTC, quest.getOptC());
+
         // Inserting Row
         dbase.insert(TABLE_QUEST,null,values);
 
@@ -130,6 +117,15 @@ public class DbHelper extends SQLiteOpenHelper {
         //Return question list
         return quesList;
     }
+
+    //Delete method
+    public void deleteQuest(String question){
+        String deleteWhere = KEY_QUES + " = '" + question+ "'";
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_QUEST,deleteWhere,null);
+    }
+
+    /*
     public int rowcount(){
         int row=0;
         String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
@@ -138,10 +134,5 @@ public class DbHelper extends SQLiteOpenHelper {
         row=cursor.getCount();
         return row;
     }
-
-    public void deleteQuest(String question){
-        String deleteWhere = KEY_QUES + " = '" + question+ "'";
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_QUEST,deleteWhere,null);
-    }
+    */
 }

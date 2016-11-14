@@ -48,14 +48,16 @@ public class ListActivity extends AppCompatActivity {
         final AlertDialog alertDialogBuilder = new AlertDialog.Builder(ListActivity.this).create();
         ListView listOptions = new ListView(ListActivity.this);
 
+        //Creating an Array of options
         ArrayList<String> options = new ArrayList<>();
         options.add(getResources().getString(R.string.updateQuestion));
         options.add(getResources().getString(R.string.deleteQuestion));
 
+        //Populating the List View with the option Modify and Delete
         ArrayAdapter<String> aa = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,options);
-
         listOptions.setAdapter(aa);
 
+        //Listener for the options on the List View
         listOptions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -68,6 +70,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+        //Showing Alert Dialog with options
         alertDialogBuilder.setView(listOptions);
         alertDialogBuilder.show();
 
