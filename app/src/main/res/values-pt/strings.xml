@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="addQuestion">Adicionar Questão</string>
+    <string name="alternatives">Alternativas:</string>
+    <string name="answer">Resposta:</string>
+    <string name="answerHint">Digite a resposta</string>
+    <string name="avgScore">Média</string>
+    <string name="btnNext">Próximo</string>
+    <string name="btnStart">Iniciar</string>
+    <string name="close">Fechar</string>
+    <string name="deleteQuestion">Excluir</string>
+    <string name="error">Erro:</string>
+    <string name="finish">Terminar</string>
+    <string name="lastScore">Última nota:</string>
+    <string name="numTests">Testes realizados:</string>
+    <string name="optA">Opção A</string>
+    <string name="optB">Opção B</string>
+    <string name="optC">Opção C</string>
+    <string name="options">Criar/Questões/Histórico</string>
+    <string name="quesHint">Digite a questão</string>
+    <string name="question">Questão:</string>
+    <string name="questions">Questões:</string>
+    <string name="score">Nota:</string>
+    <string name="txtUser">Digite seu usuário:</string>
+    <string name="updateQuestion">Alterar</string>
+    <string name="userHint">[Usuário]</string>
+</resources>

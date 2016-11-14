@@ -2,7 +2,7 @@
     <string name="app_name">Quiz</string>
     <string name="txtUser">Enter your username:</string>
     <string name="userHint">[Username]</string>
-    <string name="btnLogin">Login</string>
+    <string name="btnLogin" translatable="false">Login</string>
     <string name="numTests">Tests:</string>
     <string name="lastScore">Last score:</string>
     <string name="avgScore">Average:</string>

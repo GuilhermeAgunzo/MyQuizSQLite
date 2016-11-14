@@ -22,7 +22,7 @@
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/social_floating_menu"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="11dp"
         android:layout_marginRight="11dp"
@@ -57,7 +57,8 @@
         fab:menu_shadowYOffset="4dp"
         fab:menu_showShadow="true"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/testsTextView">
+        android:layout_toEndOf="@+id/testsTextView"
+        android:layout_alignParentStart="true">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/floating_history"
