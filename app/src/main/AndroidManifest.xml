@@ -20,6 +20,7 @@
         <activity android:name=".ResultActivity" />
         <activity android:name=".AddQuestionActivity" />
         <activity android:name=".ListActivity" />
+        <activity android:name=".UpdQuestionActivity" />
         <activity android:name=".HistoryActivity"></activity>
     </application>
 
