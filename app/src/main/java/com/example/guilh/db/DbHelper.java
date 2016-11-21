@@ -118,6 +118,47 @@ public class DbHelper extends SQLiteOpenHelper {
         return quesList;
     }
 
+    public Question getquestion(String question){
+        String selectQuery = "SELECT  * FROM " + TABLE_QUEST + " WHERE "+KEY_QUES+" = '" + question + "'";
+        dbase=this.getReadableDatabase();
+        Cursor cursor = dbase.rawQuery(selectQuery, null);
+
+        cursor.moveToFirst();
+
+        Question quest = new Question();
+        quest.setID(cursor.getInt(0));
+        quest.setQuestion(cursor.getString(1));
+        quest.setAnswer(cursor.getString(2));
+        quest.setOptA(cursor.getString(3));
+        quest.setOptB(cursor.getString(4));
+        quest.setOptC(cursor.getString(5));
+
+        return quest;
+    }
+
+    public List<Question> getAllDataQuestions(String ques) {
+        List<Question> quesList = new ArrayList<Question>();
+        //Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_QUEST + "WHERE "+ KEY_QUES + " like '?'";
+        dbase=this.getReadableDatabase();
+        Cursor cursor = dbase.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Question quest = new Question();
+                quest.setID(cursor.getInt(0));
+                quest.setQuestion(cursor.getString(1));
+                quest.setAnswer(cursor.getString(2));
+                quest.setOptA(cursor.getString(3));
+                quest.setOptB(cursor.getString(4));
+                quest.setOptC(cursor.getString(5));
+                quesList.add(quest);
+            } while (cursor.moveToNext());
+        }
+        //Return question list
+        return quesList;
+    }
+
     // Update method
     // oQuest = old Question, will be used in where statement
     // nQuest = new Question, this will be the object carrying the new question information
